@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 const Login = ()=>{
 
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => console.log(data)
     
     return(
     <div className="loginContainer">

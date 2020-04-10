@@ -10,6 +10,17 @@
             "StackName": "amplify-workclubhq-dev-200129",
             "StackId": "arn:aws:cloudformation:us-east-2:552502353867:stack/amplify-workclubhq-dev-200129/fa3b9d10-7b37-11ea-aee0-0213e0bd929e",
             "AmplifyAppId": "d1ei0hfubtnlos"
+        },
+        "categories": {
+            "auth": {
+                "workclubhqf55ae83a": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ei0hfubtnlos",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
