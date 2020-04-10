@@ -9,8 +9,8 @@ const Login = ()=>{
     return(
     <div className="loginContainer">
         <div className="logo">
-            <img src="/assets/logo.png"></img>
-        </div>
+            <img src="/assets/logo.png" alt="logo"></img>
+        </div> 
         <form onSubmit={handleSubmit(onSubmit)}>
             <input name="email" type="email" placeholder="email" ref={register({ required: true })} />
             <input name="password" type="password" placeholder="password" ref={register({ required:true })} />

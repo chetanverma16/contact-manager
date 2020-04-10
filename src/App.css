@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 .App {
   text-align: center;
   display: flex;
@@ -5,8 +7,14 @@
   width: 100vw;
   background: black;
   font-size: 16px;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: visible;
 }
 
+/* Login */
 .loginContainer{
   display:  flex;
   height: 100vh;
@@ -41,4 +49,24 @@ form button{
   border: 0px;
   font-size: 2rem;
   margin: 2rem;
+}
+
+/* home */
+.home_container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top:10rem;
+}
+
+.home_container img{
+  height: 3rem;
+}
+.home_container h1{
+  position: relative;
+  top:-10rem;
+  font-size: 14rem;
+  opacity: 0.1;
+  font-family: 'Montserrat';
 }
