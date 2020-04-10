@@ -65,8 +65,8 @@ form button{
 }
 .home_container h1{
   position: relative;
-  top:-10rem;
-  font-size: 14rem;
+  top:-5rem;
+  font-size: 12rem;
   opacity: 0.1;
   font-family: 'Montserrat';
 }
