@@ -12,8 +12,8 @@ const Login = ()=>{
             <img src="/assets/logo.png"></img>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input name="email" type="email" ref={register({ required: true })} />
-            <input name="password" type="password" ref={register({ required:true })} />
+            <input name="email" type="email" placeholder="email" ref={register({ required: true })} />
+            <input name="password" type="password" placeholder="password" ref={register({ required:true })} />
             <button type="submit">Submit</button>
         </form>
     </div>
