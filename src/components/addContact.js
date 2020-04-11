@@ -32,10 +32,12 @@ const AddContact = ()=>{
             <input name="phonenumber" type="text" placeholder="phonenumber" ref={register({required:true})}></input>
             <div className="select_wrapper">
             <label for="active">Active : </label>
-            <select name="status" className="select" ref={register}>
-                <option value="true">True</option>
-                <option value="false">False</option>
-            </select>
+                <div class="select">
+                <select name="status">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                </div>
             </div>
 
             <button type="submit">Submit</button>

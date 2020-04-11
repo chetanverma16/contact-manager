@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+
+/* Use this for theming */
+:root{
+  /* Main BG Styling */
+  --bg-color:#880e4f;
+  --container-hover:#ad1457;
+
+  /* Button Styling */
+  --button-color:transparent;
+  --button-text-color:white;
+  --button-hover-color:white;
+  --button-text-color-hover:white;
+
+  /* Select Input Styling */
+  --select-main-color:black;
+  --select-toggle-color:white;
+  --select-hover-color:green;
+
+/* Form Styling */
+  --border-bottom-color:#ad1457;
+  --form-textcolor:white;
+
+}
 body{
-    background: black;
+    background: var(--bg-color);
     color:white;
     font-family: 'Montserrat';
     font-size: 16px;
@@ -20,10 +43,105 @@ body{
   display: none;
 }
 
+
+/* Basic Styling */
+
+/* Link Styling */
 .link{
   text-decoration: none;
   color:white
 }
+
+
+/* Button Styling */
+button {
+  border: 0px;
+  background: var(--button-color);
+  color: var(--button-color);
+  padding: 1rem;
+  margin: .5rem;
+}
+
+button:hover {
+  background: var(--button-hover-color);
+  color: var(--button-text-color-hover);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Select Styling */
+
+.select_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: var(--select-main-color);
+  background-image: none;
+  font-size: 1rem;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  line-height: 3;
+  background: var(--select-toggle-color);
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: var(--select-toggle-color);
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+/* Transition */
+.select:hover::after {
+  color: var(--select-hover-color);
+}
+
+
+/* Custom Stylings  */
 
 
 /* home */
@@ -50,13 +168,15 @@ body{
 .home_container .add_button{
   position: relative;
   top:-12rem;
-  background: white;
+  background: (--button-color);
   text-align: center;
   border: 0px;
   padding: 1rem;
+  color: white;
 }
 .home_container .add_button:hover{
   opacity: 0.7;
+  hover:var(--button-hover-color)
 }
 .home_container .add_button .link{
   text-decoration: none;
@@ -71,7 +191,7 @@ body{
   top:-8rem;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-gap: 10rem;
+  grid-gap: 5rem;
   width: 70vw;
 }
 
@@ -80,6 +200,12 @@ body{
   flex-direction: column;
   align-items: flex-start;
   cursor: pointer;
+  padding: 2rem;
+  border-radius: 1%;
+  -webkit-border-radius: 1%;
+  -moz-border-radius: 1%;
+  -ms-border-radius: 1%;
+  -o-border-radius: 1%;
 }
 .contact_container:hover{
   transform: scale(1.1);
@@ -92,10 +218,11 @@ body{
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
+  background: var(--container-hover);
 }
 
 .contact_container .name{
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: .5rem;
 }
 .contact_container .sub_info{
@@ -109,24 +236,6 @@ body{
   width: 100%;
   justify-content: space-between;
 }
-
-button{
-  border:0px;
-  background: transparent;
-  color:white;
-  padding:1rem;
-  margin:.5rem;
-}
-button:hover{
-  background: white;
-  color: black;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}
-
 
 
 /* Add Contact */
@@ -142,6 +251,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 40vw;
   margin: 1rem;
 }
@@ -150,14 +260,15 @@ button:hover{
   margin: 1.4rem;
   background: transparent;
   border: 0px;
-  border-bottom: 2px solid white;
-  color: white;
+  border-bottom: 2px solid var(--border-bottom-color);
+  color: var(--form-textcolor);
   text-align: center;
   font-size: 1.4rem;
+  width: 80%;
 }
 
 .add_container form input:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .add_container .select_wrapper{
@@ -167,18 +278,32 @@ button:hover{
 .add_container .select_wrapper label{
   padding: .5rem;
 }
+.add_container button{
+  width: 80%;
+}
 
-.add_container form .select{
-  text-align: center;
-  align-self: center;
+
+
+/* Edit Form Styling */
+
+.edit_form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.edit_form form input{
   background: transparent;
-  color: white;
   border: 0px;
-  font-size: 1rem;
+  border-bottom: 1px solid var(--border-bottom-color);
+  width: 80%;
+  padding: 15px;
+  color: var(--form-textcolor);
+}
+.edit_form .edit_button_container{
+  display: flex;
+  flex-direction: row;
 }
 
-.add_container form .select option{
-  background: black;
-  font-size: 1rem;
-}
 

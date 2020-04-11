@@ -29,8 +29,8 @@ const Home = ()=>{
     return(
     <div className="home_container">
         <img src={image} alt="Logo"></img>
-            <h1>Contacts</h1>
-            <button className="add_button"><Link className="link" to="/add">Add Contact</Link></button>
+        <h1>Contacts</h1>
+        <button className="add_button"><Link className="link" to="/add">Add Contact</Link></button>
 
         {/* <h2><Link to="add">Add Contact</Link></h2> */}
         <div className="contacts_list_container">
