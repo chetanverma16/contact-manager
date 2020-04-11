@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-workclubhq-dev-154010-authRole",
+            "UnauthRoleArn": "arn:aws:iam::552502353867:role/amplify-workclubhq-dev-154010-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::552502353867:role/amplify-workclubhq-dev-154010-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-workclubhq-dev-154010-deployment",
+            "UnauthRoleName": "amplify-workclubhq-dev-154010-unauthRole",
+            "StackName": "amplify-workclubhq-dev-154010",
+            "StackId": "arn:aws:cloudformation:us-east-2:552502353867:stack/amplify-workclubhq-dev-154010/a9cf0600-7bdc-11ea-bac9-064e3beebd9c",
+            "AmplifyAppId": "dgbkm45api7bw"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dgbkm45api7bw",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
