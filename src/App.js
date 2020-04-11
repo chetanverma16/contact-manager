@@ -2,20 +2,23 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import {withAuthenticator} from 'aws-amplify-react'
+import '@aws-amplify/ui/dist/style.css';
+
 // Components
-import Login from './components/login';
 import Home from './components/home';
+import AddContact from './components/addContact'
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/login" exact>
-            <Login></Login>
-          </Route>
           <Route path="/" exact>
             <Home></Home>
+          </Route>
+          <Route path="/add" exact>
+            <AddContact></AddContact>
           </Route>
         </Switch>
       </Router>
@@ -23,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

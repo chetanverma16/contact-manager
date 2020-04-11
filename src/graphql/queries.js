@@ -12,7 +12,7 @@ export const getContacts = /* GraphQL */ `
     }
   }
 `;
-export const listContactss = /* GraphQL */ `
+export const listContacts = /* GraphQL */ `
   query ListContactss(
     $filter: ModelContactsFilterInput
     $limit: Int

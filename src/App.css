@@ -1,55 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+body{
+    background: black;
+    color:white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+
+}
+
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background: black;
-  font-size: 16px;
-  color:white;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
-  overflow-x: visible;
 }
 
-/* Login */
-.loginContainer{
-  display:  flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
+::-webkit-scrollbar {
+  display: none;
 }
 
-.loginContainer form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 30vw;
-  margin: 2rem;
+.link{
+  text-decoration: none;
+  color:white
 }
-.loginContainer form input{
-  margin: 2rem;
-  background: transparent;
-  border: 0px;
-  border-bottom: 2px solid white;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-}
-form input:hover{
-  opacity: 0.8;
-}
-form button{
-  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-  color:white;
-  padding: 1.5rem;
-  border: 0px;
-  font-size: 2rem;
-  margin: 2rem;
-}
+
 
 /* home */
 .home_container{
@@ -57,16 +32,153 @@ form button{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  top:10rem;
+  top:8rem;
+  width: 70vw;
 }
 
 .home_container img{
   height: 3rem;
 }
+
 .home_container h1{
   position: relative;
-  top:-10rem;
-  font-size: 14rem;
+  font-size: 10rem;
   opacity: 0.1;
-  font-family: 'Montserrat';
+  top: -6rem;
 }
+
+.home_container .add_button{
+  position: relative;
+  top:-12rem;
+  background: white;
+  text-align: center;
+  border: 0px;
+  padding: 1rem;
+}
+.home_container .add_button:hover{
+  opacity: 0.7;
+}
+.home_container .add_button .link{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* Contact List */
+.contacts_list_container{
+  position: relative;
+  top:-8rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10rem;
+  width: 70vw;
+}
+
+.contact_container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.contact_container:hover{
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.contact_container .name{
+  font-size: 3rem;
+  margin: .5rem;
+}
+.contact_container .sub_info{
+  font-size: 1rem;
+  margin: .5rem;
+  opacity: 0.5;
+}
+.contact_container .actions_container{
+  display: flex;
+  padding: .5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+button{
+  border:0px;
+  background: transparent;
+  color:white;
+  padding:1rem;
+  margin:.5rem;
+}
+button:hover{
+  background: white;
+  color: black;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Add Contact */
+.add_container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  margin: 1rem;
+}
+
+.add_container form input {
+  margin: 1.4rem;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.add_container form input:hover {
+  opacity: 0.8;
+}
+
+.add_container .select_wrapper{
+  text-align: center;
+  font-size: 1.2rem;
+}
+.add_container .select_wrapper label{
+  padding: .5rem;
+}
+
+.add_container form .select{
+  text-align: center;
+  align-self: center;
+  background: transparent;
+  color: white;
+  border: 0px;
+  font-size: 1rem;
+}
+
+.add_container form .select option{
+  background: black;
+  font-size: 1rem;
+}
+
