@@ -17,6 +17,9 @@
                     "appId": "d2ck283d6w44vn",
                     "type": "cicd"
                 }
+            },
+            "auth": {
+                "workclubhq9e482d8e": {}
             }
         }
     }

@@ -1,0 +1,7 @@
+type Contacts @model {
+  id: ID!
+  fullname: String!
+  email: String
+  phonenumber: String
+  status: Boolean
+}
