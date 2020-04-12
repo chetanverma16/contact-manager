@@ -1,6 +1,6 @@
 import React from 'react';
 
-const themeSelector = () =>{
+const themeSelector = ({setEnableTheme}) =>{
 
     const changeTheme = (color) => {
         document.documentElement.style.setProperty('--primary-color', color.primary)
@@ -106,6 +106,11 @@ const themeSelector = () =>{
             }
           >
           Grey
+          </button>
+          <button
+            className="theme"
+            onClick={() => setEnableTheme(false)}>
+          Hide Themes
           </button>
         </div>
     )

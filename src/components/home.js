@@ -15,6 +15,7 @@ import {listContacts} from '../graphql/queries'
 
 
 const Home = ()=>{;
+    const [EnableTheme,setEnableTheme] = useState(true)
     const [contacts,setContacts] = useState([]);
 
     const fetchContacts = async() =>{
@@ -31,7 +32,10 @@ const Home = ()=>{;
       <div className="home_container">
         <img src={image} alt="Logo"></img>
         <h1>Contacts</h1>
-        <ThemeSelector></ThemeSelector>
+        {
+          EnableTheme && (<ThemeSelector setEnableTheme={setEnableTheme}></ThemeSelector>)
+        }
+        
         <button className="add_button">
           <Link className="link" to="/add">
             Add Contact
