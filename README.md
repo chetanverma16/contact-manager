@@ -2,7 +2,6 @@
 
 
 ### Made with AWS Amplify (Hosting + Cognito + AppSync)
-### Ready for production
 
 ## How To Setup Locally
  - Clione this repo
