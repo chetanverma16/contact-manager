@@ -7,7 +7,7 @@
  - Clione this repo
  - `git checkout amplify`
  - run `npm install` or `yarn install`
- - run `npm start` ot `yarn start`
+ - run `npm start` or `yarn start`
  
  
  ## Features
