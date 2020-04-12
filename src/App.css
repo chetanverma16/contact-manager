@@ -4,31 +4,24 @@
 /* Use this for theming */
 :root{
   /* Main BG Styling */
-  --bg-color:#880e4f;
-  --container-hover:#ad1457;
-
-  /* Button Styling */
-  --button-color:transparent;
+  --primary-color: #1a237e;
+  --secondary-color:#283593;
+  --contrast-color:#303f9f;
   --button-text-color:white;
-  --button-hover-color:white;
   --button-text-color-hover:white;
-
-  /* Select Input Styling */
-  --select-main-color:black;
-  --select-toggle-color:white;
-  --select-hover-color:green;
-
-/* Form Styling */
-  --border-bottom-color:#ad1457;
   --form-textcolor:white;
 
 }
 body{
-    background: var(--bg-color);
+    background: var(--primary-color);
     color:white;
     font-family: 'Montserrat';
     font-size: 16px;
-
+    transition: all 0.2 ease-in-out;
+    -webkit-transition: all 0.2 ease-in-out;
+    -moz-transition: all 0.2 ease-in-out;
+    -ms-transition: all 0.2 ease-in-out;
+    -o-transition: all 0.2 ease-in-out;
 }
 
 .App {
@@ -49,21 +42,21 @@ body{
 /* Link Styling */
 .link{
   text-decoration: none;
-  color:white
+  color:var(--button-text-color)
 }
 
 
 /* Button Styling */
 button {
   border: 0px;
-  background: var(--button-color);
-  color: var(--button-color);
+  background-color: var(--secondary-color);
+  color: white;
   padding: 1rem;
   margin: .5rem;
 }
 
 button:hover {
-  background: var(--button-hover-color);
+  background: var(--contrast-color);
   color: var(--button-text-color-hover);
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
@@ -91,7 +84,7 @@ select {
   outline: 0;
   box-shadow: none;
   border: 0 !important;
-  background: var(--select-main-color);
+  background: var(--secondary-color);
   background-image: none;
   font-size: 1rem;
 }
@@ -108,7 +101,7 @@ select::-ms-expand {
   width: 10rem;
   height: 3rem;
   line-height: 3;
-  background: var(--select-toggle-color);
+  background: var(--contrast-color);
   overflow: hidden;
   border-radius: .25em;
 }
@@ -127,7 +120,7 @@ select {
   top: 0;
   right: 0;
   padding: 0 1em;
-  background: var(--select-toggle-color);
+  background: var(--contrast-color);
   cursor: pointer;
   pointer-events: none;
   -webkit-transition: .25s all ease;
@@ -137,7 +130,7 @@ select {
 
 /* Transition */
 .select:hover::after {
-  color: var(--select-hover-color);
+  color: var(--secondary-color);
 }
 
 
@@ -164,25 +157,29 @@ select {
   opacity: 0.1;
   top: -6rem;
 }
+.home_container .theme_selector{
+  position: relative;
+  top: -14rem;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.home_container .theme_selector button{
+  font-size: 0.8rem;
+}
 
 .home_container .add_button{
   position: relative;
   top:-12rem;
-  background: (--button-color);
   text-align: center;
   border: 0px;
   padding: 1rem;
-  color: white;
+  margin: 1rem;
 }
 .home_container .add_button:hover{
   opacity: 0.7;
-  hover:var(--button-hover-color)
+  color:var(--button-text-color-hover)
 }
-.home_container .add_button .link{
-  text-decoration: none;
-  color: black;
-}
-
 
 
 /* Contact List */
@@ -218,7 +215,7 @@ select {
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  background: var(--container-hover);
+  background: var(--secondary-color);
 }
 
 .contact_container .name{
@@ -236,6 +233,7 @@ select {
   width: 100%;
   justify-content: space-between;
 }
+
 
 
 /* Add Contact */
@@ -260,7 +258,7 @@ select {
   margin: 1.4rem;
   background: transparent;
   border: 0px;
-  border-bottom: 2px solid var(--border-bottom-color);
+  border-bottom: 2px solid var(--secondary-color);
   color: var(--form-textcolor);
   text-align: center;
   font-size: 1.4rem;
@@ -296,7 +294,7 @@ select {
 .edit_form form input{
   background: transparent;
   border: 0px;
-  border-bottom: 1px solid var(--border-bottom-color);
+  border-bottom: 1px solid var(--secondary-color);
   width: 80%;
   padding: 15px;
   color: var(--form-textcolor);

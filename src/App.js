@@ -10,6 +10,7 @@ import Home from './components/home';
 import AddContact from './components/addContact'
 
 function App() {
+
   return (
     <div className="App">
       <Router>
