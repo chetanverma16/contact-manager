@@ -1,4 +1,4 @@
-# Contact Manager For Work Club HQ
+# Contact Manager
 
 
 ### Made with AWS Amplify (Hosting + Cognito + AppSync)
