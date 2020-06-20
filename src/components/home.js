@@ -1,18 +1,56 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
+import image from '../assets/Logo.png'
 import Contacts from './contacts';
+import ThemeSelector from './themeSelector';
 
-const Home = ()=>{
+import {Link} from 'react-router-dom'
 
-    return(
-    <div className="home_container">
-        <img src="/assets/logo.png" alt="Logo"></img>
+
+import {API,graphqlOperation} from 'aws-amplify'
+
+// GraphqQL
+
+import {listContacts} from '../graphql/queries'
+
+
+const Home = ()=>{;
+    const [EnableTheme,setEnableTheme] = useState(true)
+    const [contacts,setContacts] = useState([]);
+
+    const fetchContacts = async() =>{
+        const {data} = await API.graphql(graphqlOperation(listContacts))
+        setContacts(data.listContactss.items)
+        console.log(data)
+    } 
+
+    useEffect(()=>{
+        fetchContacts();
+    },[])
+
+    return (
+      <div className="home_container">
+        <img src={image} alt="Logo"></img>
         <h1>Contacts</h1>
+        {
+          EnableTheme && (<ThemeSelector setEnableTheme={setEnableTheme}></ThemeSelector>)
+        }
+        
+        <button className="add_button">
+          <Link className="link" to="/add">
+            Add Contact
+          </Link>
+        </button>
+
+        {/* <h2><Link to="add">Add Contact</Link></h2> */}
         <div className="contacts_list_container">
-            <Contacts></Contacts>
-        </div>    
-    </div>
-    )
+          <Contacts
+            fetchContacts={fetchContacts}
+            contacts={contacts}
+          ></Contacts>
+        </div>
+      </div>
+    );
 
 }
 
